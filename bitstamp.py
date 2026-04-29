@@ -1,4 +1,6 @@
 import websocket
+import ssl
+import json
 
 
 def ao_abrir(ws):
@@ -32,5 +34,3 @@ if __name__ == "__main__":
                                 on_error=erro,
                                 on_close=ao_fechar)
     ws.run_forever(sslopt={"cert_reqs": ssl.CERT_NONE})
-
-    
